@@ -45,3 +45,10 @@ feature).
 In addition, reading one of the attributes will only trigger an update
 if the data is considered old (i.e. older as five minutes). Otherwise,
 the attribute returns cached data.
+
+**If your device does not have a correct time, the time-dependent
+logic won't work.** In this, case, pass `auto_update=False` to the
+constructor and manage data-updates manually using
+`inverter.update(force=True)`. See
+[`examples/manual/main.py`](examples/manual/main.py) for a simple
+template.
