@@ -13,4 +13,4 @@
 
 # just import the external interface class into the namespace
 
-from ._reader import EcuReader
+from ._reader import EcuReader, APSYSTEMS_UPD_INTERVAL
