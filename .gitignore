@@ -1,0 +1,9 @@
+work
+*.pyc
+TODO
+src/lib/adafruit*
+src/local
+local
+*secrets.py
+settings.py
+__pycache__
