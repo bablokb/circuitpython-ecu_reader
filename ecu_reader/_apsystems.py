@@ -57,7 +57,7 @@ class APSystemsSocket:
     self._recv_size = 1024
 
     # how long to wait between socket open/closes
-    self._socket_sleep_time = 5
+    self._socket_sleep_time = 0.05
 
     self._cmd_suffix = "END\n"
     self._ecu_query = "APS1100160001" + self._cmd_suffix
