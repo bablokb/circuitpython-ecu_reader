@@ -79,7 +79,6 @@ class APSystemsSocket:
 
   def _send_read_from_socket(self, cmd, buffer):
     try:
-      self._sock.settimeout(self._timeout)
       self._sock.sendall(cmd.encode('utf-8'))
       time.sleep(self._socket_sleep_time)
       # An infinite loop was causing the integration to block
@@ -95,7 +94,6 @@ class APSystemsSocket:
     try:
       if self._socket_open:
         data = bytearray(self._recv_size)
-        self._sock.recv_into(data,self._recv_size) #flush incoming/outgoing data after shutdown request before actually closing the socket
         self._sock.close()
         self._socket_open = False
     except Exception as err:
