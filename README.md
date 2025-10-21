@@ -19,8 +19,12 @@ Just copy `ecu_reader/` to your device. No other libraries are necessary.
 Usage
 -----
 
-See one of the examples below `examples/`. You basically create an
-inverter object:
+An UI-based application that uses this library as a submodule is
+available in my repository
+<https://github.com/bablokb/cp-ecu-display>.
+
+Simple test applications are available in the folder `examples/`. You
+basically create an inverter object:
 
     import socketpool
     import wifi
@@ -43,7 +47,7 @@ optimizing the query intervals (see the examples on how to use this
 feature).
 
 In addition, reading one of the attributes will only trigger an update
-if the data is considered old (i.e. older as five minutes). Otherwise,
+if the data is considered old (i.e. older than five minutes). Otherwise,
 the attribute returns cached data.
 
 **If your device does not have a correct time, the time-dependent
